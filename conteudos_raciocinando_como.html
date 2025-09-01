@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conteúdos Programáticos — Raciocinando Como...</title>
+<style>
+  :root{
+    --bg:#0a0d14;
+    --panel:#111826;
+    --panel-2:#0e2433;
+    --text:#eaf2ff;
+    --muted:#cbd5e1;
+    --cyan:#7dd3fc;
+    --pink:#ff4d6d;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  header{
+    background:linear-gradient(90deg,#111826,#1f2937);
+    padding:42px 20px 36px;
+    text-align:center;
+  }
+  header h1{
+    margin:0 0 10px;
+    font-size:2.4rem;
+    color:var(--cyan);
+  }
+  header p{margin:0;color:#a7b4c7;font-size:1.05rem}
+  .container{max-width:1100px;margin:0 auto;padding:28px 20px 60px}
+  /* subnav */
+  .subnav{
+    position:sticky; top:0; z-index:20;
+    background:rgba(10,13,20,.8);
+    backdrop-filter: blur(6px);
+    border-bottom:1px solid rgba(255,255,255,.06);
+  }
+  .subnav-inner{
+    max-width:1100px;margin:0 auto;display:flex;gap:10px;flex-wrap:wrap;
+    padding:12px 20px; align-items:center; justify-content:center;
+  }
+  .pill{
+    color:#0b0f14; background:var(--cyan); font-weight:700;
+    padding:8px 14px; border-radius:999px; text-decoration:none;
+  }
+  .pill.alt{ background:var(--pink); color:#fff;}
+  /* section titles */
+  .section{
+    margin-top:34px;
+  }
+  .section h2{
+    margin:0 0 16px; font-size:1.6rem; color:var(--pink);
+  }
+  .section .bar{
+    height:2px; width:100%; background:linear-gradient(90deg, var(--cyan), transparent);
+    margin-bottom:14px;
+  }
+  /* grid of details cards */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:18px;
+  }
+  details.card{
+    background:var(--panel);
+    border-radius:12px;
+    padding:18px 18px;
+    box-shadow:0 16px 36px rgba(255,77,109,.12);
+    transition:transform .2s ease;
+  }
+  details.card[open]{transform:translateY(-2px);}
+  details.card summary{
+    list-style:none; cursor:pointer; outline:none;
+    display:flex; align-items:center; justify-content:space-between; gap:10px;
+  }
+  details.card summary::-webkit-details-marker{display:none}
+  .title{
+    color:var(--cyan); font-weight:700; font-size:1.05rem;
+  }
+  .plus{
+    color:var(--muted); font-weight:900; font-size:1.2rem;
+    transition: transform .2s ease;
+  }
+  details[open] .plus{ transform:rotate(45deg); }
+  .items{ margin:14px 4px 4px; padding-left:0; list-style:none;}
+  .items li{
+    padding:10px 10px; margin:8px 0; border-radius:8px;
+    background:#0f1a26;
+    border:1px solid rgba(255,255,255,.06);
+    color:var(--muted);
+    line-height:1.45;
+  }
+  .tag{
+    display:inline-block; margin-left:8px; font-size:.78rem; font-weight:700;
+    background:var(--cyan); color:#0a0d14; padding:3px 8px; border-radius:6px;
+  }
+  .tag.alt{ background:var(--pink); color:#fff;}
+  .tag.neuro{ background:#9ae6b4; color:#0a0d14;} /* verdinho para neuro */
+  /* footer */
+  footer{ text-align:center;color:#64748b;padding:32px 20px}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Conteúdos Programáticos — Raciocinando Como...</h1>
+    <p>Explore os módulos essenciais de cada curso. Abra os cartões para ver os tópicos de cada trilha.</p>
+  </header>
+
+  <nav class="subnav">
+    <div class="subnav-inner">
+      <a class="pill" href="#medicina">Medicina</a>
+      <a class="pill alt" href="#biotech">Biotecnologia</a>
+      <a class="pill" href="#eng">Engenharias & Tech</a>
+      <a class="pill alt" href="#gestao">Gestão & Estratégia</a>
+    </div>
+  </nav>
+
+  <div class="container">
+
+    <!-- MEDICINA -->
+    <section id="medicina" class="section">
+      <h2>Medicina</h2>
+      <div class="bar"></div>
+      <div class="grid">
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Médico: Clínica Médica</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Economia das Doenças aplicada à <strong>Clínica Médica</strong> <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Administração das Doenças aplicada à <strong>Clínica Médica</strong> <span class="tag alt">Para Administração Anti-Assimétrica</span></li>
+            <li>Economia Anti-Assimétrica aplicada à <strong>Clínica Médica</strong> <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Raciocinando como <strong>Clínico</strong> — Empreendedores Inovadores I <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Raciocinando como <strong>Clínico</strong> — Empreendedores Inovadores II <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Raciocinando como <strong>Clínico</strong> — Empreendedores Inovadores III <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Vetores Neuroeconômicos na Clínica Médica <span class="tag neuro">Para Formação Neuroeconômica</span></li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Médico: Clínica Cirúrgica</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Economia das Doenças <strong>Cirúrgicas</strong> <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Administração das Doenças Cirúrgicas (pré–intra–pós) <span class="tag alt">Para Administração Anti-Assimétrica</span></li>
+            <li>Economia Anti-Assimétrica aplicada à Clínica Cirúrgica <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Raciocinando como <strong>Cirurgião</strong> — Empreendedores Inovadores I <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Raciocinando como <strong>Cirurgião</strong> — Empreendedores Inovadores II <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Raciocinando como <strong>Cirurgião</strong> — Empreendedores Inovadores III <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Neuroeconomia do risco operatório e decisão <span class="tag neuro">Para Formação Neuroeconômica</span></li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Médico: Ortopedia, Reumatologia e Med. Esportiva</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Economia das Doenças <strong>Ortopédicas-Reumatológicas</strong> <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Administração das Doenças do movimento (dor, função, performance) <span class="tag alt">Para Administração Anti-Assimétrica</span></li>
+            <li>Raciocinando como Especialista do Movimento — Empreendedores I <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Raciocinando como Especialista do Movimento — Empreendedores II <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Raciocinando como Especialista do Movimento — Empreendedores III <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Biomecânica & Vetores Neuroeconômicos da reabilitação <span class="tag neuro">Para Formação Neuroeconômica</span></li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Médico: Pediatria e Geriatria</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Economia das Doenças <strong>Pediátricas & Geriátricas</strong> <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Administração das Doenças nos extremos da vida <span class="tag alt">Para Administração Anti-Assimétrica</span></li>
+            <li>Raciocinando como Pediatra/Geriatra — Empreendedores I <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Raciocinando como Pediatra/Geriatra — Empreendedores II <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Raciocinando como Pediatra/Geriatra — Empreendedores III <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Longevidade, prevenção e escolhas intertemporais <span class="tag neuro">Para Formação Neuroeconômica</span></li>
+          </ul>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- BIOTECNOLOGIA -->
+    <section id="biotech" class="section">
+      <h2>Biotecnologia</h2>
+      <div class="bar"></div>
+      <div class="grid">
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Biotecnólogo</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Plataformas ômicas e saúde de precisão <span class="tag neuro">Para Formação Neuroeconômica</span></li>
+            <li>Bioengenharia aplicada a novos negócios <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Economia de P&D e portfólio de risco <span class="tag">Para Economia Anti-Assimétrica</span></li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Engenheiro de Tecidos</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Economia de biomateriais e bioimpressão 3D <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Design de produtos regenerativos e escalabilidade <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Ética, regulação e vetores institucionais <span class="tag neuro">Para Formação Neuroeconômica</span></li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Especialista em Genômica</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Genômica & terapias avançadas: do laboratório ao mercado <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Economia da medicina de precisão <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Privacidade, dados sensíveis e governança <span class="tag neuro">Para Formação Neuroeconômica</span></li>
+          </ul>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- ENGENHARIAS & TECH -->
+    <section id="eng" class="section">
+      <h2>Engenharias & Tech</h2>
+      <div class="bar"></div>
+      <div class="grid">
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Engenheiro Mecânico</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Raciocinando como Eng. Mecânico — Empreendedores & Inovadores I <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Térmica & Energia; Fluidos & Transferência de Calor; Termodinâmica Aplicada)</li>
+            <li>Raciocinando como Eng. Mecânico — Empreendedores & Inovadores II <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Mecanismos & Elementos de Máquinas; Projeto Mecânico; Tribologia)</li>
+            <li>Raciocinando como Eng. Mecânico — Empreendedores & Inovadores III <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Resistência dos Materiais; Dinâmica & Vibrações; CAE/FEM)</li>
+            <li>Raciocinando como Eng. Mecânico — Empreendedores & Inovadores IV <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Manufatura & CNC; Metrologia & Qualidade; Prototipagem Rápida)</li>
+            <li>Economia Anti-Assimétrica na Eng. Mecânica <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Administração Anti-Assimétrica de Projetos Mecânicos <span class="tag alt">Para Administração Anti-Assimétrica</span></li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Engenheiro da Computação</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Raciocinando como Eng. da Computação — Empreendedores & Inovadores I <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Arquitetura de Computadores; Sistemas Operacionais; Redes)</li>
+            <li>Raciocinando como Eng. da Computação — Empreendedores & Inovadores II <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Algoritmos & Estruturas de Dados; Compiladores; Eng. de Software)</li>
+            <li>Raciocinando como Eng. da Computação — Empreendedores & Inovadores III <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Sistemas Distribuídos & Cloud; Bancos de Dados; Observabilidade)</li>
+            <li>Raciocinando como Eng. da Computação — Empreendedores & Inovadores IV <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: IA/ML; Segurança & Criptografia; Privacidade & Compliance)</li>
+            <li>Economia Anti-Assimétrica aplicada à Computação <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Administração Anti-Assimétrica de Plataformas & APIs <span class="tag alt">Para Administração Anti-Assimétrica</span></li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Roboticista</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Raciocinando como Roboticista — Empreendedores & Inovadores I <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Cinemática & Dinâmica; Modelagem; Planejamento de Movimento)</li>
+            <li>Raciocinando como Roboticista — Empreendedores & Inovadores II <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Sensores & Percepção; Visão Computacional; Fusão de Dados)</li>
+            <li>Raciocinando como Roboticista — Empreendedores & Inovadores III <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Controle & RL; SLAM; Autonomia)</li>
+            <li>Raciocinando como Roboticista — Empreendedores & Inovadores IV <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Robôs Móveis & Manipuladores; Cobots; Segurança Funcional)</li>
+            <li>Economia Anti-Assimétrica na Robótica <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Administração Anti-Assimétrica de Projetos de Automação <span class="tag alt">Para Administração Anti-Assimétrica</span></li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Cientista de Materiais</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Raciocinando como Cientista de Materiais — Empreendedores & Inovadores I <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Estrutura & Processamento; Cristalografia; Defeitos em Sólidos)</li>
+            <li>Raciocinando como Cientista de Materiais — Empreendedores & Inovadores II <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Propriedades Mecânicas/Térmicas/Elétricas; Compósitos; Polímeros)</li>
+            <li>Raciocinando como Cientista de Materiais — Empreendedores & Inovadores III <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Caracterização (MEV/DRX/Espectros); Falhas; Confiabilidade)</li>
+            <li>Raciocinando como Cientista de Materiais — Empreendedores & Inovadores IV <span class="tag alt">Para Empreendedores Inovadores</span><br>(Áreas: Escalonamento & Industrialização; Sustentabilidade; Regulação)</li>
+            <li>Economia Anti-Assimétrica aplicada a Materiais <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Administração Anti-Assimétrica de P&D e Portfólio <span class="tag alt">Para Administração Anti-Assimétrica</span></li>
+          </ul>
+        </details>
+
+      </div>
+    </section>
+
+    <!-- GESTÃO & ESTRATÉGIA -->
+    <section id="gestao" class="section">
+      <h2>Gestão & Estratégia</h2>
+      <div class="bar"></div>
+      <div class="grid">
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Economista</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Princípios da Economia Anti-Assimétrica (EAA) <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Modelos de riqueza intertemporal & antifragilidade <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Mercados com assimetrias & arbitragem ética <span class="tag">Para Economia Anti-Assimétrica</span></li>
+          </ul>
+        </details>
+
+        <details class="card">
+          <summary><span class="title">Raciocinando como Administrador</span><span class="plus">+</span></summary>
+          <ul class="items">
+            <li>Administração da Vida Anti-Assimétrica (AVAA) <span class="tag">Para Economia Anti-Assimétrica</span></li>
+            <li>Design organizacional & execução disciplinada <span class="tag alt">Para Empreendedores Inovadores</span></li>
+            <li>Estratégia, governança & métricas de valor <span class="tag alt">Para Empreendedores Inovadores</span></li>
+          </ul>
+        </details>
+
+      </div>
+    </section>
+
+  </div>
+
+  <footer>© 2025 — Raciocinando Como… | Todos os direitos reservados</footer>
+</body>
+</html>

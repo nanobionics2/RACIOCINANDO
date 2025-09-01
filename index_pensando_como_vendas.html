@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Raciocinando Como… | Landing de Vendas</title>
+<style>
+  :root{
+    --bg:#0a0d14;
+    --panel:#111826;
+    --panel-2:#0e2433;
+    --text:#eaf2ff;
+    --muted:#cbd5e1;
+    --cyan:#7dd3fc;
+    --pink:#ff4d6d;
+    --green:#22c55e;
+    --yellow:#facc15;
+  }
+  *{box-sizing:border-box}
+  html, body{height:100%}
+  body{
+    margin:0;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background:var(--bg);
+    color:var(--text);
+  }
+  a{color:inherit}
+  .container{max-width:1120px;margin:0 auto;padding:0 20px}
+  /* HERO */
+  .hero{
+    position:relative;
+    padding:72px 0 56px;
+    background:radial-gradient(1200px 600px at 50% -10%, rgba(125,211,252,.18), transparent 60%),
+               radial-gradient(900px 500px at 90% 10%, rgba(255,77,109,.18), transparent 60%);
+    text-align:center;
+  }
+  .logo{
+    font-weight:800; letter-spacing:.5px; color:var(--cyan); font-size:14px;
+    text-transform:uppercase;
+  }
+  .hero h1{
+    font-size:2.6rem; margin:12px auto 10px; max-width:900px; color:var(--text);
+  }
+  .hero p.sub{
+    font-size:1.15rem; color:#a7b4c7; max-width:860px; margin:0 auto 18px; line-height:1.55;
+  }
+  .badges{display:flex; gap:10px; flex-wrap:wrap; justify-content:center; margin:18px 0 28px}
+  .badge{background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.08);
+         color:#dbeafe; padding:8px 12px; border-radius:999px; font-weight:700; font-size:.9rem}
+  .cta-row{display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin-top:8px}
+  .btn{
+    display:inline-block; padding:14px 22px; border-radius:10px; text-decoration:none; font-weight:800;
+    box-shadow:0 12px 30px rgba(255,77,109,.25); transition:transform .15s ease, opacity .2s ease;
+  }
+  .btn-primary{background:linear-gradient(90deg, var(--pink), #ef476f); color:#fff;}
+  .btn-secondary{background:linear-gradient(90deg, var(--cyan), #60a5fa); color:#0b0f14;}
+  .btn:hover{transform:translateY(-2px)}
+  /* TRUST */
+  .trust{
+    padding:22px 0 0;
+    text-align:center; color:#9fb3c8; font-size:.95rem;
+  }
+  /* BENEFITS */
+  .section{padding:48px 0}
+  .section h2{color:var(--cyan); font-size:1.8rem; margin:0 0 14px; text-align:center}
+  .lead{color:#b7c4d6; text-align:center; margin:0 auto 24px; max-width:900px}
+  .benefits{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px;
+  }
+  .box{
+    background:var(--panel); border:1px solid rgba(255,255,255,.06); border-radius:12px; padding:16px 16px;
+    box-shadow:0 16px 36px rgba(255,77,109,.12);
+  }
+  .box h3{margin:0 0 8px; color:#eaf2ff; font-size:1.05rem}
+  .box p{margin:0; color:var(--muted); font-size:.97rem; line-height:1.55}
+  .check{color:var(--green); margin-right:6px}
+  /* CARDS (cursos) */
+  .cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:18px;
+    margin-top:18px;
+  }
+  .card{background:var(--panel); border-radius:12px; padding:18px; box-shadow:0 16px 36px rgba(255,77,109,.12)}
+  .card h4{color:var(--cyan); margin:0 0 6px}
+  .card p{color:var(--muted); margin:0}
+  /* PRICING */
+  .pricing{display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:18px; margin-top:18px}
+  .price-card{background:var(--panel-2); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:22px}
+  .price-card h3{margin:0 0 4px; color:#fff}
+  .price{font-size:2rem; font-weight:900; color:#fff; margin:10px 0}
+  .price small{font-size:.9rem; color:#94a3b8; font-weight:600}
+  .bullets{list-style:none; padding:0; margin:12px 0 0}
+  .bullets li{margin:8px 0; color:#d1d5db}
+  .ribbon{display:inline-block;background:var(--pink); color:#fff; font-weight:800; padding:4px 10px; border-radius:999px; font-size:.8rem}
+  /* GUARANTEE / FAQ */
+  .guarantee{background:rgba(34,197,94,.08); border:1px solid rgba(34,197,94,.25); color:#d1fae5; border-radius:12px; padding:18px; margin-top:16px}
+  details.faq{background:#0e1522; border:1px solid rgba(255,255,255,.06); border-radius:10px; padding:12px 14px}
+  details.faq summary{cursor:pointer; font-weight:700; color:#eaf2ff}
+  details.faq p{color:#cbd5e1}
+  /* STICKY CTA */
+  .sticky{
+    position:sticky; bottom:0; background:rgba(10,13,20,.9); backdrop-filter: blur(6px);
+    border-top:1px solid rgba(255,255,255,.08); padding:12px 0; z-index:30;
+  }
+  .sticky .container{display:flex; gap:10px; align-items:center; justify-content:center; flex-wrap:wrap}
+  .sticky .mini{font-weight:700; color:#9fb3c8}
+  /* FOOTER */
+  footer{ text-align:center;color:#64748b;padding:22px 0 60px}
+  @media (max-width:560px){
+    .hero h1{font-size:2rem}
+  }
+</style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="logo">Raciocinando Como…</div>
+      <h1>Domine o raciocínio dos profissionais que moldam o mundo — e use isso para criar <span style="color:var(--cyan)">negócios, riqueza</span> e <span style="color:var(--pink)">futuro</span>.</h1>
+      <p class="sub">Você não precisa de um diploma para pensar como engenheiros, médicos, economistas ou cientistas. Nosso método une <strong>Economia Anti‑Assimétrica</strong> e <strong>Administração da Vida Anti‑Assimétrica</strong> para transformar conhecimento em <strong>decisões intertemporais</strong> e resultados reais.</p>
+
+      <div class="badges">
+        <span class="badge">Metodologia proprietária</span>
+        <span class="badge">Projetos práticos</span>
+        <span class="badge">Programa Seja Sócio</span>
+        <span class="badge">Certificação</span>
+      </div>
+
+      <div class="cta-row">
+        <a href="#matricula" class="btn btn-primary">Quero minha vaga agora</a>
+        <a href="#cursos" class="btn btn-secondary">Ver cursos e conteúdos</a>
+      </div>
+
+      <div class="trust">+ Estratégia, + Tecnologia, + Autonomia • Sem enrolação, apenas o essencial que gera impacto</div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS/PROVAS -->
+  <section class="section">
+    <div class="container">
+      <h2>Por que esta formação é diferente?</h2>
+      <p class="lead">Você aprende a raciocinar como especialistas, aplica os pilares da EAA/AVAA e transforma isso em negócios, carreira e saúde financeira — sem perder tempo, nem dinheiro.</p>
+      <div class="benefits">
+        <div class="box"><h3><span class="check">✔</span>Raciocínio de elite</h3><p>Frameworks para pensar como Eng., Médicos, Economistas e criar soluções que o mercado ainda não enxerga.</p></div>
+        <div class="box"><h3><span class="check">✔</span>Decisões intertemporais</h3><p>Reduza perdas, acumule riqueza e saúde com escolhas que se valorizam no tempo.</p></div>
+        <div class="box"><h3><span class="check">✔</span>Economia Anti‑Assimétrica</h3><p>Identifique assimetrias, capture valor e desenhe negócios antifrágeis.</p></div>
+        <div class="box"><h3><span class="check">✔</span>Administração da Vida</h3><p>Gestão aplicável à vida, doenças, carreira e investimentos — com base neuroeconômica.</p></div>
+        <div class="box"><h3><span class="check">✔</span>Programa Seja Sócio</h3><p>Conecte-se a ideias e pessoas para cofundar projetos e startups.</p></div>
+        <div class="box"><h3><span class="check">✔</span>Sem enrolação</h3><p>Conteúdo denso, organizado e aplicável. Do essencial ao protótipo.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CURSOS -->
+  <section id="cursos" class="section" style="padding-top:20px">
+    <div class="container">
+      <h2>Nossos cursos</h2>
+      <p class="lead">Escolha a trilha que conversa com seus objetivos. Todos incluem acesso ao <strong>Programa Seja Sócio</strong>.</p>
+
+      <div class="cards">
+        <div class="card"><h4>Raciocinando como Engenheiro Mecânico</h4><p>Física aplicada, mecanismos, resistência dos materiais e manufatura. Do projeto ao produto.</p></div>
+        <div class="card"><h4>Raciocinando como Cientista de Materiais</h4><p>Do átomo ao mercado: materiais, caracterização e escalabilidade industrial.</p></div>
+        <div class="card"><h4>Raciocinando como Médico: Clínica Médica</h4><p>Economia & administração das doenças clínicas, decisão com incertezas, triagem inteligente.</p></div>
+        <div class="card"><h4>Raciocinando como Médico: Clínica Cirúrgica</h4><p>Risco-operatório, planejamento, precisão e oportunidades de inovação cirúrgica.</p></div>
+        <div class="card"><h4>Raciocinando como Biotecnólogo</h4><p>Ômicas, bioengenharia e negócios em saúde de precisão.</p></div>
+        <div class="card"><h4>Raciocinando como Engenheiro de Tecidos</h4><p>Biomateriais, bioimpressão 3D e produtos regenerativos.</p></div>
+        <div class="card"><h4>Raciocinando como Médico: Ortopedia/Reumato/Esporte</h4><p>Dor, movimento e regeneração com viés empreendedor.</p></div>
+        <div class="card"><h4>Raciocinando como Médico: Pediatria & Geriatria</h4><p>Longevidade, prevenção e escolhas intertemporais.</p></div>
+        <div class="card"><h4>Raciocinando como Engenheiro da Computação</h4><p>Arquiteturas, software, IA/segurança e plataformas de negócio.</p></div>
+        <div class="card"><h4>Raciocinando como Roboticista</h4><p>Percepção, controle, autonomia e automação de alto ROI.</p></div>
+        <div class="card"><h4>Raciocinando como Economista</h4><p>Economia Anti‑Assimétrica, riqueza intertemporal e arbitragem ética.</p></div>
+        <div class="card"><h4>Raciocinando como Administrador</h4><p>Administração da Vida Anti‑Assimétrica, execução e métricas de valor.</p></div>
+      </div>
+
+      <div style="text-align:center; margin-top:18px">
+        <a href="conteudos_raciocinando_como.html" class="btn btn-secondary">Ver conteúdos programáticos completos</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS / INVESTIMENTO -->
+  <section id="matricula" class="section" style="padding-top:20px">
+    <div class="container">
+      <h2>Planos e acesso</h2>
+      <p class="lead">Escolha entre combo profissional ou cursos avulsos. Condições e lotes podem variar conforme a turma.</p>
+      <div class="pricing">
+        <div class="price-card">
+          <span class="ribbon">Mais indicado</span>
+          <h3>Combo Profissional (2 cursos)</h3>
+          <div class="price">R$ 4.997 <small>lote promocional</small></div>
+          <ul class="bullets">
+            <li>2 cursos completos + certificação</li>
+            <li>Acesso ao Programa Seja Sócio</li>
+            <li>Mentorias coletivas de projeto</li>
+            <li>Bônus: Guia de Decisões Intertemporais</li>
+          </ul>
+          <div class="cta-row" style="justify-content:flex-start; margin-top:16px">
+            <a class="btn btn-primary" href="#checkout-combo">Quero o Combo</a>
+            <a class="btn btn-secondary" href="#fale">Falar com especialista</a>
+          </div>
+        </div>
+        <div class="price-card">
+          <h3>Curso Avulso</h3>
+          <div class="price">R$ 3.997 <small>profissionais • valores podem variar</small></div>
+          <ul class="bullets">
+            <li>1 curso completo + certificação</li>
+            <li>Acesso ao Programa Seja Sócio</li>
+            <li>Comunidade e rede de parceiros</li>
+          </ul>
+          <div class="cta-row" style="justify-content:flex-start; margin-top:16px">
+            <a class="btn btn-primary" href="#checkout-avulso">Quero este curso</a>
+            <a class="btn btn-secondary" href="#fale">Tirar dúvidas</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="guarantee">
+        <strong>Garantia de 7 dias.</strong> Se você achar que o curso não é para você, devolvemos 100% do investimento dentro do prazo de garantia — sem perguntas.
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section">
+    <div class="container">
+      <h2>Perguntas frequentes</h2>
+      <div class="lead" style="margin-bottom:14px">Se ainda ficou alguma dúvida, veja abaixo ou fale com nossa equipe.</div>
+      <div class="benefits" style="gap:12px">
+        <details class="faq"><summary>Como são as aulas?</summary><p>Aulas gravadas e materiais de apoio + encontros ao vivo pontuais para projetos e dúvidas.</p></details>
+        <details class="faq"><summary>O que é o Programa Seja Sócio?</summary><p>É o nosso ecossistema de co‑criação: selecionamos ideias promissoras e aproximamos alunos, mentores e parceiros para virar negócio.</p></details>
+        <details class="faq"><summary>Qual o público ideal?</summary><p>Empreendedores, profissionais e estudantes que querem raciocinar como especialistas e transformar isso em produtos, empresas e autonomia.</p></details>
+        <details class="faq"><summary>Posso entrar sem formação prévia?</summary><p>Sim. O método ensina o essencial com profundidade prática para você dialogar e liderar especialistas.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- STICKY CTA -->
+  <div class="sticky">
+    <div class="container">
+      <span class="mini">⚡ Próxima turma com vagas limitadas</span>
+      <a class="btn btn-primary" href="#matricula">Garantir minha vaga</a>
+      <a class="btn btn-secondary" href="#fale">Falar com especialista</a>
+    </div>
+  </div>
+
+  <footer>© 2025 — Raciocinando Como… | Todos os direitos reservados</footer>
+</body>
+</html>

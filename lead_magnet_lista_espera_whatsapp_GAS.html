@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guia + Lista de Espera | Raciocinando Como…</title>
+<meta name="description" content="Entre para a lista de espera e receba o Guia de Decisões Intertemporais. Captura de e‑mail, WhatsApp e código de afiliado.">
+<style>
+  :root{
+    --bg:#0a0d14;
+    --panel:#111826;
+    --panel-2:#0e2433;
+    --text:#eaf2ff;
+    --muted:#cbd5e1;
+    --cyan:#7dd3fc;
+    --pink:#ff4d6d;
+    --green:#22c55e;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;background:var(--bg);color:var(--text)}
+  a{color:inherit}
+  .container{max-width:1120px;margin:0 auto;padding:0 20px}
+  .hero{
+    position:relative; text-align:center; padding:72px 0 56px;
+    background:radial-gradient(1200px 600px at 50% -10%, rgba(125,211,252,.18), transparent 60%),
+               radial-gradient(900px 500px at 90% 10%, rgba(255,77,109,.18), transparent 60%);
+  }
+  .logo{font-weight:800;color:var(--cyan);text-transform:uppercase;letter-spacing:.5px;font-size:14px}
+  .hero h1{font-size:2.4rem;margin:12px auto 10px;max-width:900px}
+  .hero p.sub{font-size:1.12rem;color:#a7b4c7;max-width:880px;margin:0 auto 16px;line-height:1.55}
+  .badges{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin:16px 0 22px}
+  .badge{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.08);color:#dbeafe;padding:8px 12px;border-radius:999px;font-weight:700;font-size:.9rem}
+  .wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:18px;margin-top:18px}
+  .panel{background:var(--panel-2);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px}
+  .panel h3{margin:0 0 8px}
+  .panel p{margin:0;color:#cbd5e1}
+  form{background:var(--panel);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:18px;box-shadow:0 16px 36px rgba(255,77,109,.12)}
+  label{display:block;margin:12px 0 6px;color:#eaf2ff;font-weight:600}
+  input, select, textarea{
+    width:100%; padding:12px 12px; border-radius:10px; background:#0e1522; border:1px solid rgba(255,255,255,.08); color:#eaf2ff
+  }
+  .row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .hint{font-size:.9rem;color:#9fb3c8}
+  .checkbox{display:flex;gap:10px;align-items:flex-start;margin-top:10px;color:#cbd5e1}
+  .checkbox input{width:auto;margin-top:3px}
+  .btn{
+    display:inline-block; padding:14px 22px; border-radius:10px; text-decoration:none; font-weight:800;
+    box-shadow:0 12px 30px rgba(255,77,109,.25); transition:transform .15s ease, opacity .2s ease; border:none; cursor:pointer;
+    background:linear-gradient(90deg, var(--pink), #ef476f); color:#fff; margin-top:12px
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .success{display:none;margin-top:14px;background:rgba(34,197,94,.08);border:1px solid rgba(34,197,94,.25);color:#d1fae5;border-radius:10px;padding:12px}
+  .error{display:none;margin-top:14px;background:rgba(239,68,68,.08);border:1px solid rgba(239,68,68,.25);color:#fecaca;border-radius:10px;padding:12px}
+  footer{text-align:center;color:#64748b;padding:28px 0 60px}
+  @media(max-width:560px){.row{grid-template-columns:1fr} .hero h1{font-size:2rem}}
+</style>
+</head>
+<body>
+
+  <section class="hero">
+    <div class="container">
+      <div class="logo">Raciocinando Como…</div>
+      <h1>Guia de Decisões Intertemporais + Lista de Espera</h1>
+      <p class="sub">Entre na lista e receba o <strong>guia gratuito</strong>. Informe seu e‑mail, WhatsApp e (opcional) a <strong>palavra‑chave/afiliado</strong> para descontos.</p>
+      <div class="badges">
+        <span class="badge">Economia Anti‑Assimétrica</span>
+        <span class="badge">Administração da Vida</span>
+        <span class="badge">Frameworks prontos</span>
+        <span class="badge">Sem spam</span>
+      </div>
+
+      <div class="wrap">
+        <div class="panel">
+          <h3>O que você recebe</h3>
+          <p>• Mini‑guia com <strong>checklists</strong> intertemporais<br>
+             • 3 matrizes de decisão (vida, saúde, negócios)<br>
+             • Avisos de novas turmas e condições especiais<br>
+             • Acesso prioritário ao <strong>Programa Seja Sócio</strong></p>
+        </div>
+
+        <!-- FORM -->
+        <form id="leadForm" novalidate>
+          <div class="row">
+            <div>
+              <label for="nome">Nome (opcional)</label>
+              <input type="text" id="nome" name="nome" autocomplete="name" placeholder="Seu nome">
+            </div>
+            <div>
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="voce@email.com" required>
+            </div>
+          </div>
+
+          <div class="row">
+            <div>
+              <label for="whats">WhatsApp *</label>
+              <input type="tel" id="whats" name="whats" placeholder="+55 11 99999-9999" required>
+              <div class="hint">Inclua DDD. Ex.: +55 11 99999-9999</div>
+            </div>
+            <div>
+              <label for="afiliado">Palavra‑chave / Afiliado (opcional)</label>
+              <input type="text" id="afiliado" name="afiliado" placeholder="Ex.: MEDPRO, ENG10, JOAOAF">
+              <div class="hint">Se veio por indicação, coloque o código para descontos.</div>
+            </div>
+          </div>
+
+          <label for="interesse">Área de maior interesse</label>
+          <select id="interesse" name="interesse">
+            <option>Empreendedorismo & Inovação</option>
+            <option>Medicina & Saúde</option>
+            <option>Engenharias & Computação</option>
+            <option>Biotecnologia & Materiais</option>
+            <option>Economia & Administração</option>
+          </select>
+
+          <label for="objetivo">Seu objetivo (opcional)</label>
+          <textarea id="objetivo" name="objetivo" rows="3" placeholder="Ex.: criar produto, abrir startup, melhorar decisões, etc."></textarea>
+
+          <!-- honeypot -->
+          <input type="text" id="website" name="website" style="display:none">
+
+          <div class="checkbox">
+            <input type="checkbox" id="lgpd" required>
+            <label for="lgpd">Li e aceito a <a href="#" target="_blank">Política de Privacidade</a> e desejo receber comunicações.</label>
+          </div>
+
+          <button class="btn" type="submit">Quero o Guia + Entrar na Lista</button>
+          <div id="success" class="success">✅ Cadastro recebido! Enviaremos o guia por e‑mail/WhatsApp. Caso não veja, cheque o spam/Promoções.</div>
+          <div id="error" class="error">⚠️ Não foi possível enviar agora. Tente novamente em instantes.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer>© 2025 — Raciocinando Como… | Todos os direitos reservados</footer>
+
+<script>
+// ===== CONFIGURAÇÃO DO ENDPOINT (Google Apps Script) =====
+// Depois de publicar seu Web App, cole a URL abaixo:
+const ENDPOINT_URL = "COLE_AQUI_A_URL_DO_SEU_WEB_APP";
+
+function isValidEmail(email){ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); }
+function isValidBRPhone(p){ return /^(\+?55\s?)?\d{2}\s?9?\d{4}\-?\d{4}$/.test(p.replace(/\s/g,'')); }
+
+// Pré-preencher afiliado via ?af=?aff=?ref=
+(function prefillAffiliate(){
+  const params = new URLSearchParams(window.location.search);
+  const af = params.get('af') || params.get('aff') || params.get('ref');
+  if(af){ document.getElementById('afiliado').value = af; }
+})();
+
+const form = document.getElementById('leadForm');
+const success = document.getElementById('success');
+const errorBox = document.getElementById('error');
+
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  success.style.display = 'none';
+  errorBox.style.display = 'none';
+
+  const data = {
+    nome: form.nome.value.trim(),
+    email: form.email.value.trim(),
+    whats: form.whats.value.trim(),
+    afiliado: form.afiliado.value.trim(),
+    interesse: form.interesse.value,
+    objetivo: form.objetivo.value.trim(),
+    website: form.website.value.trim(), // honeypot
+    source: 'Lead Magnet • Lista de Espera (GAS)'
+  };
+
+  if(!isValidEmail(data.email)){
+    errorBox.textContent = '⚠️ Informe um e‑mail válido.';
+    errorBox.style.display = 'block'; return;
+  }
+  if(!isValidBRPhone(data.whats)){
+    errorBox.textContent = '⚠️ Informe um WhatsApp válido (ex.: +55 11 99999-9999).';
+    errorBox.style.display = 'block'; return;
+  }
+  if(!document.getElementById('lgpd').checked){
+    errorBox.textContent = '⚠️ É necessário aceitar a Política de Privacidade (LGPD).';
+    errorBox.style.display = 'block'; return;
+  }
+  if(data.website){ return; } // bot
+
+  // Se for Google Apps Script, use no-cors (não dá para ler resposta)
+  const isGAS = ENDPOINT_URL.includes('script.google.com');
+  const fetchOpts = {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(data),
+    ...(isGAS ? { mode: 'no-cors' } : {})
+  };
+
+  try{
+    await fetch(ENDPOINT_URL, fetchOpts);
+    form.reset();
+    success.style.display = 'block';
+    if(window.dataLayer){ window.dataLayer.push({event:'lead_capturado', afiliado: data.afiliado || '(none)'}); }
+  }catch(err){
+    console.error(err);
+    errorBox.style.display = 'block';
+  }
+});
+</script>
+</body>
+</html>
